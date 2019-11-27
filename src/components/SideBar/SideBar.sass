@@ -1,0 +1,41 @@
+@import '../../assets/sass/media'
+
+.side-bar
+  background: transparent
+
+  .nav-mobile
+    display: none
+
+    +xs
+      display: block
+      position: fixed
+      z-index: 9
+      bottom: 20px
+      left: 20px
+      background: transparent
+
+      .ant-btn
+        box-shadow: 0px 0px 12px #333
+        background-color: #232323
+        border-color: #232323
+        color: #FFF
+
+  .nav-collapse
+    display: block
+
+    +xs
+      display: none
+
+  +xs
+    position: fixed
+    height: 100%
+    z-index: 99
+
+  .ant-menu-root
+    position: sticky
+    top: 64px
+    height: calc(100vh - 64px)
+    overflow-y: unset
+
+    .ant-menu-inline
+      background-color: #FAFAFA

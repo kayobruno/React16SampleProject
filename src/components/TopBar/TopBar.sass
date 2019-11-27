@@ -1,0 +1,115 @@
+@import '../../assets/sass/media'
+@import '../../assets/sass/colors'
+
+.top-bar
+  background: #fff
+  padding: 0 16px
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 99
+  width: 100%
+  border-bottom: 1px solid $hr
+
+  .top-bar-wrap
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: center
+
+    .top-bar-logo
+      display: flex
+      flex-flow: row nowrap
+      justify-content: flex-start
+      align-items: center
+
+  .trigger
+    font-size: 18px
+    padding: 0 10px
+    cursor: pointer
+    transition: color .3s
+    width: 36px
+    min-width: 36px
+    height: 36px
+    min-height: 36px
+    position: relative
+
+    &:after
+      content: ''
+      background: $hr
+      position: absolute
+      width: 36px
+      height: 36px
+      border-radius: 50%
+      left: 0
+      top: 0
+      opacity: 0
+      transition: opacity .3s
+      cursor: pointer
+      z-index: 0
+
+    &:hover
+      color: $primary
+
+      &:after
+        opacity: 1
+
+    svg
+      position: relative
+      top: 50%
+      left: -1px
+      transform: translateY(-50%)
+      z-index: 1
+
+  .nav-bar
+    .user-name
+      display: inline-block
+      padding-right: 10px
+
+    .ant-menu-horizontal
+      line-height: 62px
+
+    &.nav-bar-end
+      margin-left: auto
+
+      .ant-menu-horizontal
+        .ant-menu-submenu-title
+          .anticon
+            margin-right: 0
+
+    .nav-mobile
+      display: none
+
+      +xs
+        display: block
+
+    .top-menu
+      display: block
+
+      +xs
+        display: none
+
+
+.ant-dropdown
+  min-width: 100px
+
+  .ant-dropdown-menu
+    .ant-dropdown-menu-item
+      .anticon
+        margin-right: 10px
+
+    .ant-dropdown-menu-submenu
+      .ant-dropdown-menu-submenu-title
+        width: 100%
+        padding-right: 0
+
+        span
+          .anticon
+            margin-right: 10px
+            font-size: 14px
+
+        .ant-dropdown-menu-submenu-arrow
+          position: unset
+
+          .anticon
+            margin-right: 0

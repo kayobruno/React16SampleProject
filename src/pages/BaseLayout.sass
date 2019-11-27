@@ -1,0 +1,19 @@
+@import '../assets/sass/colors'
+@import '../assets/sass/media'
+
+body
+  background: $bg
+
+.base-layout
+  padding-top: 64px
+  min-height: 100vh
+
+.hidden-xs
+  display: none !important
+  +sm
+    display: block !important
+
+.show-xs
+  display: block !important
+  +sm
+    display: none !important
